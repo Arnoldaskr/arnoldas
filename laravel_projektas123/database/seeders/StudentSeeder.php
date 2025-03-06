@@ -11,14 +11,13 @@ class StudentSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        
-        for ($i = 0; $i < 10; $i++) {
+
+        for ($i = 0; $i < 1000; $i++) {
             Student::create([
-                'vardas' => $faker->firstName,
-                'pavarde' => $faker->lastName,
-                'gim_data' => $faker->date,
-                'telefonas' => $faker->phoneNumber,
-                'adresas' => $faker->address,
+                'name' => $faker->firstName,   // Keičiam 'vardas' -> 'name'
+                'surname' => $faker->lastName, // Keičiam 'pavarde' -> 'surname'
+                'phone' => $faker->phoneNumber, // Keičiam 'telefonas' -> 'phone'
+                'address' => $faker->address,   // Keičiam 'adresas' -> 'address'
             ]);
         }
     }
