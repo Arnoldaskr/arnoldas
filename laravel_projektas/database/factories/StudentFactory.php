@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\City;
 
 class StudentFactory extends Factory
 {
@@ -13,7 +14,7 @@ class StudentFactory extends Factory
             'surname' => $this->faker->lastName,
             'address' => $this->faker->address,
             'phone' => $this->faker->phoneNumber,
+            'city_id' => City::inRandomOrder()->first()->id ?? 1, // Priskiria atsitiktinį miestą
         ];
     }
 }
-
