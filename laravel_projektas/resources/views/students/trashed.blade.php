@@ -9,6 +9,7 @@
         <form action="{{ route('students.restore', $student->id) }}" method="POST">
             @csrf
             <button type="submit" class="btn btn-success">Atkurti</button>
+          
         </form>
     </td>
     <td>

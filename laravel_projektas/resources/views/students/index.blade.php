@@ -64,7 +64,7 @@
                     <td>
                         <form action="{{ route('students.restore', $student->id) }}" method="POST" class="d-inline">
                             @csrf
-                            @method('PATCH')
+                            @method('POST')
                             <button type="submit" class="btn btn-warning btn-sm">Atkurti</button>
                         </form>
                     </td>
